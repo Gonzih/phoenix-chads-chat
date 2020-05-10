@@ -1,0 +1,13 @@
+<section class="phx-hero">
+  <h1><%= "Welcome #{@name}!" %></h1>
+
+  <%= for %{message: m, name: n} <- Enum.reverse(@messages) do %>
+    <div><%= n %>: <%= m %></div>
+  <% end %>
+
+  <div>&nbsp;</div>
+
+  <form phx-submit="send-message">
+    <input type="text" name="message" placeholder="Message" list="results" autocomplete="off"/>
+  </form>
+</section>
