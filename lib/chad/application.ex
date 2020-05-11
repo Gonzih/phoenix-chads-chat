@@ -8,7 +8,7 @@ defmodule Chad.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Chad.Repo,
+      # Chad.Repo,
       # Start the Telemetry supervisor
       ChadWeb.Telemetry,
       # Start the PubSub system
